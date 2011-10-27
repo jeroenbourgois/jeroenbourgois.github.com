@@ -1,0 +1,8 @@
+@import url("bootstrap.css");
+html{border:none;}
+body{font-family:'Helvetica Neue',Arial,'Helvetica',sans-serif;font:12px 'Helvetica',Arial,sans-serif;line-height:1.4;}
+p{font-size:16px;font-weight:100;line-height:1.5;}
+h3{line-height:1.5;font-size:18px;margin-bottom:20px;}
+header{width:250px;position:fixed;padding:10px;font-size:14px;font-weight:100;}header h2{font-size:20px;margin-bottom:5px;}
+header h3{font:12px monaco,consolas,monospace,sans-serif;color:#555;}
+#main{top:0;margin:0 0 0 250px;padding-top:50px;font-weight:light;width:600px;}

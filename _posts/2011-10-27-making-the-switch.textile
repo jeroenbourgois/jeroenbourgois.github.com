@@ -1,0 +1,8 @@
+---
+layout: blog
+title: Making the switch
+summary: Switching my blog/thoughts over to github
+---
+
+# {{ page.title }}
+After...

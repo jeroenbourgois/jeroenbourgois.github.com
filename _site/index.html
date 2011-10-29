@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Jeroen Bourgois &rarr; portolio &diams; blog"</title>
+  <title>Jeroen Bourgois &rarr; portolio &amp; blog"</title>
 	<meta name="description" content="Jeroen Bourgois &rarr; portolio &diams; blog" />
 	<meta name="author" content="Jeroen Bourgois" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,25 +13,72 @@
 </head>
 <body>
 	<header>
-	  <h2>Jeroen Bourgois</h2>
-	  <h3>make/install</h3>
-	  <!--
+    <h2><a href="/">Jeroen Bourgois</a></h2>
+	  <h3>make/install <a href="http://twitter.com/#!/jeroenbourgois">@jeroenbourgois</a></h3>
     <nav id="menu">
-      <ul>
+      <ul class="unstyled">
         
         <li><a href="/blog/2011/10/27/making-the-switch">Making the switch</a></li>
         
+        <li><a href="/blog/2011/09/30/vim-and-actionscript">Vim and Actionscript</a></li>
+        
+        <li><a href="/blog/2011/05/28/behat-and-php-535-homebrew">Behat and PHP 5.3.5</a></li>
+        
+        <li><a href="/blog/2011/04/10/mongodb-group-by-with-mongoose">MongoDB group by with Mongoose</a></li>
+        
+        <li><a href="/blog/2011/03/30/rupa-z-save-time-in-terminal">Rupa "Z" save time in terminal</a></li>
+        
+        <li><a href="/blog/2011/03/02/command-t-macvim-and-rvm">Command-t, MacVim and RVM</a></li>
+        
       </ul>  
     </nav>
-    <ul id="meta">
-      <li><a href="#">twitter</a></li>
-      <li><a href="#">mail</a></li>
-      <li><a href="#">mail</a></li>
-    </ul>
-    -->
 	</header>
 	<div id="main" role="main">
-	  <h1>more coming <code>soon</code></h1>
+	  
+<section class="post">
+  <h2>Making the switch</h2>
+<p>After migrating to Posterous a while, I decided to give the Github Pages a try. We will see how this adventure goes.</p>
+</section>
+
+<section class="post">
+  <h2>Vim and Actionscript</h2>
+<p>Sometimes for small Flash projects, I don&#8217;t want to use the slow hog that is Flash Builder (aka Flex Builder), so I do my scripting, as always, in Vim. But by default there is no syntax file for actionscript. I found an excellent sample script by <a href="http://www.abdulqabiz.com/blog/archives/2007/10/12/vim-actionscript-and-mxml-syntax-files/">Abdul Qabiz</a>, and mirrored it on <a href="https://github.com/jeroenbourgois/vim-actionscript">github</a> for easy of use and consistency. (I load all my bundles through <a href="https://github.com/gmarik/vundle">Vundle</a> and all bundles come from github).</p>
+<p>Have fun!</p>
+</section>
+
+<section class="post">
+  <h1>Behat and <span class="caps">PHP</span> 5.3.5</h1>
+<p>Yesterday, I was trying to install <a href="http://behat.org/">behat</a>, a nice <span class="caps">BDD</span> framework for <span class="caps">PHP</span>. But although following the instructions on their site, I got a &#8220;behat command not found&#8221; error when trying to run it. So the actual executable could not be found. My system was looking in /usr/local/lib, but not finding a symlink to my homebrew folder for behat specifically. So I just created it myself, and it worked perfectlly :). Here is the symlink:</p>
+<p><code>ln -s /usr/local/Cellar/php/5.3.5/bin/behat /usr/local/bin/behat</code></p>
+<p>Hope I can help someone else who has the same problem!</p>
+</section>
+
+<section class="post">
+  <h2>MongoDB group by with Mongoose</h2>
+<p>I&#8217;m using <a href="http://mongoosejs.com/">Mongoose</a> lately to connect to a <a href="http://www.mongodb.org/">MongoDB</a>&quot; from a <a href="http://nodejs.org/">node.js</a> app, and along the way I needed an equivalent of the mysql &#8216;<strong>group by</strong>&#8217; syntax. While the MongoDB documentation contained info about how to do a group by, I couldn&#8217;t get it to work with Mongoose. After a bit of trial and error I came up with this:</p>
+<script src="https://gist.github.com/912688.js?file=gistfile1.js"></script><p>Hope that helps anyone else on the same quest!</p>
+</section>
+
+<section class="post">
+  <h2>Rupa &#8220;Z&#8221; save time in terminal</h2>
+<p>Not a big post this time, but a timesaver for the terminal addicts out there. Almost every time (and I do mean almost <strong><em>each and every</em></strong> time) I use the cool <a href="https://github.com/rupa/z">z</a> command in terminal followed by a folder name, I am again amazed and pleased with the result. Simply put, it is a script that allows you to jump to your recent folders (and &#8220;recent&#8221; actually can be long ago) by using part of a path or folder name. It also keeps a ranking for each folder, so if you were working in<br />
+<code>/root/some/long/path/to/your/projects/SomeCrazyProjects</code><br />
+then you can just hit:<br />
+<code>z crazy</code><br />
+And you&#8217;ll get there. For more info, just go to <a href="https://github.com/rupa/z">https://github.com/rupa/z</a> and try it out!</p>
+</section>
+
+<section class="post">
+  <h2>Command-t, MacVim and <span class="caps">RVM</span></h2>
+<p>Yesterday, I really wanted to try out the Vim <a href="https://wincent.com/products/command-t">command-t</a> plugin to open files fast and smart. But you <strong>need</strong> a vim compiled with ruby support, which the default <span class="caps">OSX</span> vim lacks. A good option is to use <a href="http://code.google.com/p/macvim">MacVim</a>, but I ran into a problem, something like:<br />
+<br />
+<code>command-t.vim could not load the C extension</code><br />
+<br />
+After some digging, I found that <a href="http://rvm.beginrescueend.com"><span class="caps">RVM</span></a> was causing the problems. As I found on the CommandT forums, CommandT should be build <span class="label warning"><strong>against exactly the same ruby version</strong></span> as MacVim is build against (which is 1.8.7 for MacVim Version 7.3). So here is what I did:<br />
+<br />
+<script src="https://gist.github.com/851620.js?file=macvim-ruby-rvm.sh"></script>
+</section>
+
 	
 	</div>
   <script>

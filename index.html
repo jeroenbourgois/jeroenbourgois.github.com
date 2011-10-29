@@ -1,6 +1,10 @@
 ---
 layout: default
-title: Jeroen Bourgois &rarr; portolio &diams; blog"
+title: Jeroen Bourgois &rarr; portolio &amp; blog"
 ---
 
-<h1>more coming <code>soon</code></h1>
+{% for post in site.posts %}
+<section class="post">
+  {{ post.content }}
+</section>
+{% endfor %}

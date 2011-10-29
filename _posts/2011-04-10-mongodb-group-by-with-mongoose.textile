@@ -1,0 +1,11 @@
+---
+layout: default
+title: MongoDB group by with Mongoose
+---
+
+h2. {{ page.title }}
+
+I'm using "Mongoose":http://mongoosejs.com/ lately to connect to a "MongoDB":http://www.mongodb.org/" from a "node.js":http://nodejs.org/ app, and along the way I needed an equivalent of the mysql '*group by*' syntax. While the MongoDB documentation contained info about how to do a group by, I couldn't get it to work with Mongoose. After a bit of trial and error I came up with this:
+
+<script src="https://gist.github.com/912688.js?file=gistfile1.js"></script>
+Hope that helps anyone else on the same quest!

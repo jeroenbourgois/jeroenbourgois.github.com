@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Making the switch</title>
+  <title>Behat and PHP 5.3.5</title>
 	<meta name="description" content="Jeroen Bourgois &rarr; portolio &diams; blog" />
 	<meta name="author" content="Jeroen Bourgois" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,8 +34,10 @@
     </nav>
 	</header>
 	<div id="main" role="main">
-	  <h2>Making the switch</h2>
-<p>After migrating to Posterous a while, I decided to give the Github Pages a try. We will see how this adventure goes.</p>	
+	  <h1>Behat and <span class="caps">PHP</span> 5.3.5</h1>
+<p>Yesterday, I was trying to install <a href="http://behat.org/">behat</a>, a nice <span class="caps">BDD</span> framework for <span class="caps">PHP</span>. But although following the instructions on their site, I got a &#8220;behat command not found&#8221; error when trying to run it. So the actual executable could not be found. My system was looking in /usr/local/lib, but not finding a symlink to my homebrew folder for behat specifically. So I just created it myself, and it worked perfectlly :). Here is the symlink:</p>
+<p><code>ln -s /usr/local/Cellar/php/5.3.5/bin/behat /usr/local/bin/behat</code></p>
+<p>Hope I can help someone else who has the same problem!</p>	
 	</div>
   <script>
     var _gaq=[['_setAccount','UA-548507-11'],['_trackPageview']];

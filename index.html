@@ -3,8 +3,10 @@ layout: default
 title: Jeroen Bourgois &rarr; portolio &amp; blog"
 ---
 
-{% for post in site.posts %}
-<section class="post">
-  {{ post.content }}
+<section id="googlestuff">
+  {% for post in site.posts %}
+  <section class="post">
+    {{ post.content }}
+  </section>
+  {% endfor %}
 </section>
-{% endfor %}

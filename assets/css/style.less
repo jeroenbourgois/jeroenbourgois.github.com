@@ -7,22 +7,29 @@
 /* ------------------------------------------------------------------------ */
 @import url("bootstrap.css");
 
-@header_width: 300px;
+@content_width: 600px;
 
 html {
   border: none;
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, 'Helvetica', sans-serif;
-  font: 12px 'Helvetica', Arial, sans-serif;
+  font: 16px 'Helvetica', Arial, sans-serif;
+  font-weight: 100;
   line-height: 1.4;
+  width: @content_width;
+  margin: 0 auto;
 }
 
 p {
   font-size: 16px;
   font-weight: 100;
   line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -35,10 +42,16 @@ h3 {
   margin-bottom: 20px;
 }
 
+ul {
+  li {
+    font-weight: 100;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+}
+
 header {
-  width: @header_width;
-  position: fixed;
-  padding: 10px;
+  padding-top: 10px;
   font-size: 14px;
   font-weight: 100;
 
@@ -58,15 +71,20 @@ header {
 }
 
 #main {
-  top: 0;
-  margin: 0 0 0 @header_width;
-  padding-top: 50px;
+  padding-top: 10px;
   font-weight: light;
-  width: 600px;
 }
 
 .post {
   margin-bottom: 60px;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#googlestuff {
+  display: none;
+}
+
+.article #menu {
+  display: none;
 }

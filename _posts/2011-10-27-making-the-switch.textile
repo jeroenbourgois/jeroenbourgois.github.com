@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Making the switch
 summary: Switching my blog/thoughts over to github
 ---

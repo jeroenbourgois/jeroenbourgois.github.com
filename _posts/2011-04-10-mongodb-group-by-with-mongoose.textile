@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: MongoDB group by with Mongoose
 ---
 

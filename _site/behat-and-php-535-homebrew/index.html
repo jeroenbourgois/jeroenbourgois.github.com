@@ -1,0 +1,82 @@
+<!doctype html>  
+<html>
+<head>
+  <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Behat and PHP 5.3.5</title>
+	<meta name="description" content="Jeroen Bourgois &rarr; portolio &diams; blog" />
+	<meta name="author" content="Jeroen Bourgois" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="/assets/img/favicon.png" />
+	<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+	<link rel="stylesheet" href="/assets/css/style.css" /> 	
+  <script type="text/javascript">
+    var disqus_shortname = 'jeroenbourgois';
+    (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'http://disqus.com/forums/jeroenbourgois/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+</head>
+
+<body class="article">
+  <header>
+    <h2><a href="/">Jeroen Bourgois</a></h2>
+    <h3>make/install <a href="http://twitter.com/#!/jeroenbourgois">@jeroenbourgois</a> - <a href="#articles" id="showarticles">articles</a></h3>
+    <nav id="menu">
+      <ul class="unstyled">
+        
+        <li><a href="/making-the-switch">2011-10-27 ~ Making the switch</a></li>
+        
+        <li><a href="/vim-and-actionscript">2011-09-30 ~ Vim and Actionscript</a></li>
+        
+        <li><a href="/behat-and-php-535-homebrew">2011-05-28 ~ Behat and PHP 5.3.5</a></li>
+        
+        <li><a href="/mongodb-group-by-with-mongoose">2011-04-10 ~ MongoDB group by with Mongoose</a></li>
+        
+        <li><a href="/rupa-z-save-time-in-terminal">2011-03-30 ~ Rupa "Z" save time in terminal</a></li>
+        
+        <li><a href="/command-t-macvim-and-rvm">2011-03-02 ~ Command-t, MacVim and RVM</a></li>
+        
+        <li><a href="/nginx-alongside-apache-on-osx-snow-leopard">2011-02-26 ~ Nginx alongside Apache on OSX</a></li>
+        
+      </ul>  
+    </nav>
+	</header>
+	<article id="main" role="main">
+	  <h1>Behat and <span class="caps">PHP</span> 5.3.5</h1>
+<p>Yesterday, I was trying to install <a href="http://behat.org/">behat</a>, a nice <span class="caps">BDD</span> framework for <span class="caps">PHP</span>. But although following the instructions on their site, I got a &#8220;behat command not found&#8221; error when trying to run it. So the actual executable could not be found. My system was looking in /usr/local/lib, but not finding a symlink to my homebrew folder for behat specifically. So I just created it myself, and it worked perfectlly :). Here is the symlink:</p>
+<p><code>ln -s /usr/local/Cellar/php/5.3.5/bin/behat /usr/local/bin/behat</code></p>
+<p>Hope I can help someone else who has the same problem!</p>	
+	</article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_identifier = disqus_identifier && 'badid' || '';
+    (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = 'http://jeroenbourgois.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jeroenbourgois">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script src="/assets/js/zepto.min.js"></script>
+  <script>
+    $('#showarticles').bind('click', function() {
+      if($("#menu").css('display') == "block")
+        $("#menu").hide(); 
+      else
+        $("#menu").show();
+    });
+  </script>
+  <script>
+    var _gaq=[['_setAccount','UA-548507-11'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <noscript>Your browser does not support JavaScript!</noscript> 
+</body>
+</html>
+

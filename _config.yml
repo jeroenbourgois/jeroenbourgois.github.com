@@ -1,5 +1,5 @@
 title: Jeroen Bourgois &rarr; portolio &diams; blog
-permalink: /blog/:year/:month/:day/:title
+permalink: /:title
 pygments: true
 exclude:
   README.md

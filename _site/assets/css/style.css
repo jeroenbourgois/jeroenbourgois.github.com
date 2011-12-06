@@ -1,6 +1,6 @@
 @import url("bootstrap.css");
-html{border:none;}
-body{font:16px 'Helvetica',Arial,sans-serif;font-weight:100;line-height:1.4;width:600px;margin:0 auto;}
+html{border:none;background-color:white;}
+body{font:16px 'Helvetica',Arial,sans-serif;font-weight:100;line-height:1.4;width:600px;margin:0 auto;padding:20px;}
 p{font-size:16px;font-weight:100;line-height:1.5;margin-bottom:25px;}
 h1{margin-bottom:20px;}
 h2{margin-bottom:15px;}
@@ -12,3 +12,4 @@ header h3{font:12px monaco,consolas,monospace,sans-serif;color:#555;}
 .post{margin-bottom:60px;padding-bottom:30px;border-bottom:1px solid rgba(0, 0, 0, 0.1);}
 #googlestuff{display:none;}
 .article #menu{display:none;}
+@media screen and (max-device-width: 480px){body{width:280px;}}

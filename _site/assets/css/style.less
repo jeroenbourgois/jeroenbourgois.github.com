@@ -8,9 +8,11 @@
 @import url("bootstrap.css");
 
 @content_width: 600px;
+@content_mobile_width: 280px;
 
 html {
   border: none;
+  background-color: white;
 }
 
 body {
@@ -19,6 +21,7 @@ body {
   line-height: 1.4;
   width: @content_width;
   margin: 0 auto;
+  padding: 20px;
 }
 
 p {
@@ -64,10 +67,6 @@ header {
     font: 12px monaco, consolas, monospace, sans-serif;
     color: #555;
   }
-
-  #menu {
-
-  }
 }
 
 #main {
@@ -87,4 +86,12 @@ header {
 
 .article #menu {
   display: none;
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  body {
+    width: @content_mobile_width;
+  }
 }

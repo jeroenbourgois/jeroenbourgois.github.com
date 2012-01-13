@@ -1,0 +1,28 @@
+---
+layout: article
+title: SSD Rocks!
+---
+
+h1. {{ page.title }}
+
+So to be honest, I am _far_ from a tech savvy computer hardware wiz, but I know one thing: SSD hard disks rock! To be more clear... 
+
+As a small 'new years gift' :) the IT department at work gave me a brand new SSD hard disk, as a test drive before upgrading all systems. Only a few months ago I already had performance improvement when I received a 4 GB RAM update, breing the total to 8GB. This was particularly useful when running VirtualBox images, as I saw the swap file increasing then. And as we know, swaps are costly.
+
+But frankly, in day to day use, besides the VM's, I find the SSD update much more rewarding. Maybe it's a combination of both - I couldn't say since I don't have objective benchmarks - but that SSD really helped a lot. It even shows in the small things, such as opening Microsoft Word _***shiver***_. I don't do it often, as I don't _need_ it to work, but some info just comes as .doc sometimes, as it does as xls.
+
+Before I always sighed '??pffff another 10-20 seconds wasted??' What are 10 seconds you say? Well actually, a lot! For just a text document of 100 lines? Hell, I open a 10 000 lines text file in Vim in less than 5 seconds. So having those docs and xls's opening in <5 secs is a blessing.
+
+Than we have other more obvious performance boosts:
+* boot times reduced
+* Photoshop is on fire now!
+* What, Flash can be fast too ? ( besides the fact those stupid fonts still take too much time )
+* Getting file info inside Finder is a breeze
+
+Moreover, I have the feeling I am even missing out on the details, those kind of details you only notice if you would go back to the old 'slow' hdd.
+
+As far as space is concerned, it is still rather limited when you don't want to spend € 300+, but for me 180GB is sufficient. And if I would run out of space, I can still place my personal music on an external HDD, it does not need to be fast, and in essence, it's not _needed_ for work.
+
+To wrap it up, no benchmarks, but just a gut feeling: SSD rocks!
+
+I'm a happy camper :)

@@ -5,7 +5,8 @@ title: Pharao, create .phar files like a King
 
 h1. {{ page.title }}
 
-We have a small internal framework, which uses the "Zend":http://framework.zend.com/?src=hpbt framework amongst other stuff. We chose Zend because it is well documented and widespread, and also feature rich. The basic framework (here I mean ??our?? framework) only includes some components of the Zend framework, but when we took a look at the amount of single files, we saw they were plenty! This has it's impact on svn checkouts and commits - timewise - rather than on disk usage.
+We have a small internal framework, which uses the "Zend":http://framework.zend.com/?src=hpbt framework amongst other stuff. We chose Zend because it is well documented and widespread, and also feature rich. The basic framework (here I mean ??our?? framework) only includes some components of the Zend framework, but when we took a look at the amount of single files, we saw they were plenty! 
+This has it's impact on *svn checkouts and commits* - time wise - rather than on disk usage.
 
 Besides Zend there was also "Limonade PHP":http://www.limonade-php.net/, which was the basis of our ported version. Both are needed on load, but it would be easier if they could be combined into a single package. That's when @phar@ files come into place. 
 

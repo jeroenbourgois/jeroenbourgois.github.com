@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Rupa "Z" save time in terminal</title>
+  <title>Pharao, create .phar files like a King</title>
 	<meta name="description" content="Jeroen Bourgois &rarr; portolio &diams; blog" />
 	<meta name="author" content="Jeroen Bourgois" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,12 +49,17 @@
     </nav>
 	</header>
 	<article id="main" role="main">
-	  <h2>Rupa &#8220;Z&#8221; save time in terminal</h2>
-<p>Not a big post this time, but a timesaver for the terminal addicts out there. Almost every time (and I do mean almost <strong><em>each and every</em></strong> time) I use the cool <a href="https://github.com/rupa/z">z</a> command in terminal followed by a folder name, I am again amazed and pleased with the result. Simply put, it is a script that allows you to jump to your recent folders (and &#8220;recent&#8221; actually can be long ago) by using part of a path or folder name. It also keeps a ranking for each folder, so if you were working in<br />
-<code>/root/some/long/path/to/your/projects/SomeCrazyProjects</code><br />
-then you can just hit:<br />
-<code>z crazy</code><br />
-And you&#8217;ll get there. For more info, just go to <a href="https://github.com/rupa/z">https://github.com/rupa/z</a> and try it out!</p>	
+	  <h1>Pharao, create .phar files like a King</h1>
+<p>We have a small internal framework, which uses the <a href="http://framework.zend.com/?src=hpbt">Zend</a> framework amongst other stuff. We chose Zend because it is well documented and widespread, and also feature rich. The basic framework (here I mean <cite>our</cite> framework) only includes some components of the Zend framework, but when we took a look at the amount of single files, we saw they were plenty! This has it&#8217;s impact on svn checkouts and commits &#8211; timewise &#8211; rather than on disk usage.</p>
+<p>Besides Zend there was also <a href="http://www.limonade-php.net/">Limonade <span class="caps">PHP</span></a>, which was the basis of our ported version. Both are needed on load, but it would be easier if they could be combined into a single package. That&#8217;s when <code>phar</code> files come into place.</p>
+<p>You can see them as a zip/tar/gzip archive that contains all of the library files. Because it was kind of a hassle to generate one, I had to find some bits and pieces on the net, so I thought I&#8217;d collect them into an executable.</p>
+<p>You just do:<br />
+<code>pharao -s SOURCE_DIR -p PHARNAME.phar</code></p>
+<p>And the phar should be generated.</p>
+<h2>Credits</h2>
+<p>Big credits to <b>Cal Evans and John Douglass</b> for all the code!</p>
+<h2>Code</h2>
+<p>All is on <a href="https://github.com/jeroenbourgois/pharao">GitHub</a> and ready to be improved!</p>	
 	</article>
   <div id="disqus_thread"></div>
   <script type="text/javascript">

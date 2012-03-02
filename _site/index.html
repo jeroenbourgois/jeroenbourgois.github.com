@@ -52,7 +52,8 @@
   
   <section class="post">
     <h1>Pharao, create .phar files like a King</h1>
-<p>We have a small internal framework, which uses the <a href="http://framework.zend.com/?src=hpbt">Zend</a> framework amongst other stuff. We chose Zend because it is well documented and widespread, and also feature rich. The basic framework (here I mean <cite>our</cite> framework) only includes some components of the Zend framework, but when we took a look at the amount of single files, we saw they were plenty! This has it&#8217;s impact on svn checkouts and commits &#8211; timewise &#8211; rather than on disk usage.</p>
+<p>We have a small internal framework, which uses the <a href="http://framework.zend.com/?src=hpbt">Zend</a> framework amongst other stuff. We chose Zend because it is well documented and widespread, and also feature rich. The basic framework (here I mean <cite>our</cite> framework) only includes some components of the Zend framework, but when we took a look at the amount of single files, we saw they were plenty! <br />
+This has it&#8217;s impact on <strong>svn checkouts and commits</strong> &#8211; time wise &#8211; rather than on disk usage.</p>
 <p>Besides Zend there was also <a href="http://www.limonade-php.net/">Limonade <span class="caps">PHP</span></a>, which was the basis of our ported version. Both are needed on load, but it would be easier if they could be combined into a single package. That&#8217;s when <code>phar</code> files come into place.</p>
 <p>You can see them as a zip/tar/gzip archive that contains all of the library files. Because it was kind of a hassle to generate one, I had to find some bits and pieces on the net, so I thought I&#8217;d collect them into an executable.</p>
 <p>You just do:<br />

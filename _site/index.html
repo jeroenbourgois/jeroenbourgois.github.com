@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Jeroen Bourgois &rarr; portolio &amp; blog"</title>
+  <title>Jeroen Bourgois &rarr; portolio &amp; blog</title>
 	<meta name="description" content="Jeroen Bourgois &rarr; portolio &diams; blog" />
 	<meta name="author" content="Jeroen Bourgois" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,15 +40,11 @@
         
         <li><a href="/behat-and-php-535-homebrew">2011-05-28 ~ Behat and PHP 5.3.5</a></li>
         
-        <li><a href="/mongodb-group-by-with-mongoose">2011-04-10 ~ MongoDB group by with Mongoose</a></li>
-        
         <li><a href="/rupa-z-save-time-in-terminal">2011-03-30 ~ Rupa "Z" save time in terminal</a></li>
         
         <li><a href="/command-t-macvim-and-rvm">2011-03-02 ~ Command-t, MacVim and RVM</a></li>
         
-        <li><a href="/nginx-alongside-apache-on-osx-snow-leopard">2011-02-26 ~ Nginx alongside Apache on OSX</a></li>
-        
-      </ul>  
+      </ul>
     </nav>
 	</header>
 	<div id="main" role="main">
@@ -127,12 +123,6 @@ This has it&#8217;s impact on <strong>svn checkouts and commits</strong> &#8211;
   </section>
   
   <section class="post">
-    <h2>MongoDB group by with Mongoose</h2>
-<p>I&#8217;m using <a href="http://mongoosejs.com/">Mongoose</a> lately to connect to a <a href="http://www.mongodb.org/">MongoDB</a>&quot; from a <a href="http://nodejs.org/">node.js</a> app, and along the way I needed an equivalent of the mysql &#8216;<strong>group by</strong>&#8217; syntax. While the MongoDB documentation contained info about how to do a group by, I couldn&#8217;t get it to work with Mongoose. After a bit of trial and error I came up with this:</p>
-<script src="https://gist.github.com/912688.js?file=gistfile1.js"></script><p>Hope that helps anyone else on the same quest!</p>
-  </section>
-  
-  <section class="post">
     <h2>Rupa &#8220;Z&#8221; save time in terminal</h2>
 <p>Not a big post this time, but a timesaver for the terminal addicts out there. Almost every time (and I do mean almost <strong><em>each and every</em></strong> time) I use the cool <a href="https://github.com/rupa/z">z</a> command in terminal followed by a folder name, I am again amazed and pleased with the result. Simply put, it is a script that allows you to jump to your recent folders (and &#8220;recent&#8221; actually can be long ago) by using part of a path or folder name. It also keeps a ranking for each folder, so if you were working in<br />
 <code>/root/some/long/path/to/your/projects/SomeCrazyProjects</code><br />
@@ -152,72 +142,8 @@ After some digging, I found that <a href="http://rvm.beginrescueend.com"><span c
 <script src="https://gist.github.com/851620.js?file=macvim-ruby-rvm.sh"></script>
   </section>
   
-  <section class="post">
-    <h1>Nginx alongside Apache on <span class="caps">OSX</span></h1>
-<p>The other day I wanted to experiment with the superfast nginx server on osx for static files, and to use the built-in apache webserver as power unit to process the dynamic content.</p>
-<p>Although not very hard to setup, there are some thing you should bear in mind:</p>
-<ul>
-	<li>for each server (aka virtualhost) you will add to nginx, you will need to add a virtualhost to apache (at least if the server you were adding will have dynamic content)</li>
-	<li>nginx has a good base documentation on it&#8217;s site, but I still think of it as an underdog server. That is, for every article you will find on the web for an nginx problem/issue, there will be 100 to find for apache.</li>
-</ul>
-<p>Anyhow, let&#8217;s get on with it. Please not that I did not come up with all this myself, I found a lot of information scattered through different tutorials, which will be listed below. All credits to those authors!</p>
-<h2>Installation</h2>
-<ul>
-	<li>install <a href="http://github.com/mxcl/homebrew">homebrew</a> , you&#8217;ll love it!</li>
-	<li>install <a href="http://nginx.org/">nginx</a></li>
-</ul>
-<p><code>brew install nginx</code></p>
-<p>Installation done! On to the configuration</p>
-<h2>Configuration</h2>
-<h3>Nginx</h3>
-<p>First, let&#8217;s set up nginx so it uses the somewhat cleaner &#8220;sites-enabled/sites-available&#8221; structure. Some might already seen it on apache2 or somewhere else, and I find it cleaner than putting all your virtual hosts in one (or several) file. This way, for each site you add you create the config file in the sites-available folder, then symlink it in the sites-enabled folder and just have nginx to load all the files in the sites-enabled folder. That way, whenever you temporarly want do disable a virtual host, you can just remove the symlink, and not have to remove the actual config file (you might want to keep it for future reference).</p>
-<ul>
-	<li>Go to your nginx config folder (when installed with <em>homebrew</em>, that will typically be in <strong><code>/usr/local/etc/nginx/</code></strong></li>
-	<li>There create two folders, <strong>sites-enable</strong> and <strong>sites-available</strong>.</li>
-</ul>
-<script src="https://gist.github.com/845454.js?file=nginx-create-folders"></script><ul>
-	<li>open up <code>nginx.conf</code> in your favorite text editor and update it to your likings. My file is listed below, you can play with the settings, but it is important you have the &#8216;<strong>include sites-enabled/</strong>&#8217; line. That will make sure all your servers are loaded.</li>
-</ul>
-<script src="https://gist.github.com/845457.js?file=gistfile1.cpp"></script><ul>
-	<li>go into the sites-available folder and create a server config file</li>
-	<li>include the listing below (and change to your needs)</li>
-</ul>
-<script src="https://gist.github.com/845463.js?file=gistfile1.cpp"></script><ul>
-	<li>now create a symlink to the file in the sites-enabled folder</li>
-</ul>
-<script src="https://gist.github.com/845467.js?file=gistfile1.eclass"></script><ul>
-	<li>start nginx</li>
-</ul>
-<p><code>sudo nginx</code></p>
-<ul>
-	<li>or to restart:<br />
-<code>sudo nginx -s reload</code></li>
-</ul>
-<h3>Apache</h3>
-<ul>
-	<li>open httpd.conf, should be in <strong><code>/etc/apache2/httpd.conf</code></strong></li>
-	<li>update the port apache listens on to <strong>127.0.0.1:8080</strong> (since nginx will be running on port 80, apache should be on another port), around line</li>
-	<li>add your virtualhost (or include and external vhost file and add it there). Note that you could go for the same sites-enabled/sites-available setup here, like I did</li>
-	<li>note that your virtualhost should have the <em><strong>same</strong></em> ServerName as the one you used in nginx, and it should listen on <strong>port 8080</strong>!</li>
-</ul>
-<script src="https://gist.github.com/845471.js?file=nginx-apache-vhost.xml"></script><ul>
-	<li>restart apache</li>
-</ul>
-<script src="https://gist.github.com/846057.js?file=apache-restart"></script><h3>Hosts &amp; Go!</h3>
-<p>Now just update your hosts file ( <strong>/etc/hosts</strong> ) to include your newly created server:<br />
-<code>127.0.0.1 dropbox.local</code></p>
-<p>And point your browser to http://dropbox.local. You should see the directory listing of all your folders, or if you planted a site there, it should run! If you do run into errors, first check out both the nginx and apache error logs in the Console, it might help you.</p>
-<h3>Credits</h3>
-<p>Big thanks to the following persons for their great articles and posts on forums:</p>
-<ul>
-	<li><a href="http://forum.nginx.org/read.php?11,69147,69181">http://forum.nginx.org/read.php?11,69147,69181</a></li>
-	<li><a href="http://forum.nginx.org/read.php?11,69147,69181">http://brainspl.at/nginx.conf.txt</a></li>
-	<li><a href="http://crashingdaily.wordpress.com/2008/09/28/fronting-apache-with-nginx/">http://crashingdaily.wordpress.com/2008/09/28/fronting-apache-with-nginx/</a></li>
-</ul>
-  </section>
-  
 </section>
-	
+
 	</div>
 <script src="/assets/js/zepto.min.js"></script>
   <script>

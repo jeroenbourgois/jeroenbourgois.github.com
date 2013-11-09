@@ -2,4 +2,4 @@ title: Jeroen Bourgois &rarr; portolio &diams; blog
 permalink: /:title
 pygments: true
 exclude:
-  README.md
+  - README.md

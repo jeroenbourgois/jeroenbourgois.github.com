@@ -1,6 +1,6 @@
 {% include header.html %}
 <body class="article">
-  <header>
+  <header class="site-header">
     <h2><a href="/">Jeroen Bourgois</a></h2>
     <h3>make/install <a href="http://twitter.com/#!/jeroenbourgois">@jeroenbourgois</a> - <a href="#articles" id="showarticles">articles</a></h3>
     <nav id="menu">
@@ -8,11 +8,11 @@
         {% for post in site.posts %}
         <li><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} ~ {{ post.title }}</a></li>
         {% endfor %}
-      </ul>  
+      </ul>
     </nav>
 	</header>
-	<article id="main" role="main">
-	  {{ content }}	
+	<article class="site-content" role="main">
+	  {{ content }}
 	</article>
   <div id="disqus_thread"></div>
   <script type="text/javascript">

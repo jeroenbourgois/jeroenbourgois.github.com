@@ -1,0 +1,116 @@
+
+// clearfix!
+
+@mixin clearfix
+  *zoom: 1
+
+  overflow: hidden
+
+@mixin legacy-pie-clearfix
+  *zoom: 1
+
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    clear: both
+    overflow: hidden
+    visibility: hidden
+
+@mixin pie-clearfix
+  *zoom: 1
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// animations
+
+@mixin animate($speed)
+  +transition-property(all)
+  +transition-duration($speed)
+  +transition-timing-function(cubic-bezier(0.680, -0.550, 0.265, 1.550))
+
+// backgrounds
+
+@mixin background-image-retina($file, $type, $width, $height)
+  background-image: url($file + '.' + $type + '?1234')
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    &
+      background-image: url($file + '@2x.' + $type + '?1234')
+      -webkit-background-size: $width $height
+      -moz-background-size: $width $height
+      -o-background-size: $width $height
+      background-size: $width $height
+
+@mixin vector-bg-with-fallback($name)
+  background: url('#{$name}.png') no-repeat
+  background: rgba(0,0,0,0) url('#{$name}.svg') no-repeat
+
+// breakpoints for MQ in the element
+
+@mixin breakpoint($point)
+  @if $point == xxl
+    @media (min-width: 1600px)
+      @content
+
+  @if $point == xl
+    @media (min-width: 1200px)
+      @content
+
+  @if $point == l
+    @media (min-width: 960px)
+      @content
+
+  @else if $point == m
+    @media (min-width: 768px)
+      @content
+
+  @else if $point == s
+    @media (min-width: 580px)
+      @content
+
+  @else
+    @media (min-width: $point)
+      @content
+
+// generate the correct line height
+
+@mixin font-size($sizeValue: 16, $spaceValue: 1.45)
+  font-size: $sizeValue + px
+  font-size: ($sizeValue / 16) + rem
+  line-height: $spaceValue
+
+// vertical align the unknown
+
+@mixin vertical-align-parent
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -0.25em /* Adjusts for spacing */
+
+@mixin vertical-align-child
+  display: inline-block
+  vertical-align: middle
+
+@mixin opacity($value)
+  $IEValue: $value * 100
+
+  opacity: $value
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")"
+  filter: alpha(opacity=$IEValue)
+
+// hacks
+
+@mixin fontsmoothing
+  -webkit-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+@mixin no-flick
+  +translate3d(0, 0, 0)

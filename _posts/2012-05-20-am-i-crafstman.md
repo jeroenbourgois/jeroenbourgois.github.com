@@ -3,7 +3,8 @@ layout: article
 title: Am I a crafstman?
 ---
 
-h1. {{ page.title }}
+{{ page.title }}
+================
 
 I am on the verge of building our own house. Or to be precise: to let other qualified people build my house. I am not that much of a 'handy-man' myself, so I put my trust in others to do the job - thoroughly - for me. But we (as in 'us', the so called __unhandy__) know that feeling every once in a while, when the tap is dripping or the closet just doesn't close like it should. Or those times that stupid dishwasher just stopped working!
 

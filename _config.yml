@@ -1,5 +1,6 @@
 title: Jeroen Bourgois &rarr; portolio &diams; blog
 permalink: /:title
-pygments: true
+highlighter: true
 exclude:
   - README.md
+  - vendor

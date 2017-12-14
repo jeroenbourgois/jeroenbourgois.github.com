@@ -3,7 +3,8 @@ layout: article
 title: Command-t, MacVim and RVM
 ---
 
-h2. {{ page.title }}
+{{ page.title }}
+================
 
 <p>Yesterday, I really wanted to try out the Vim "command-t":https://wincent.com/products/command-t plugin to open files fast and smart. But you *need* a vim compiled with ruby support, which the default OSX vim lacks. A good option is to use "MacVim":http://code.google.com/p/macvim, but I ran into a problem, something like:
 

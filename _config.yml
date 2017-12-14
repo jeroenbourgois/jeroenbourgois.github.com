@@ -3,5 +3,3 @@ permalink: /:title
 pygments: true
 exclude:
   - README.md
-
-theme: jekyll-theme-cayman
